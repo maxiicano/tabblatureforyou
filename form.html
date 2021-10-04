@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tablature For You!</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <header>
+        <div class=" navbar navbar-dark bg-dark shadow-sm ">
+            <div class="container d-flex justify-content-between ">
+                <a href="index.html" class="navbar-brand d-flex">
+                    <strong>TFY!</strong>
+                </a>                
+            </div>
+        </div>
+    </header>
+    <a href="index.html">
+        <div class="backBtn">
+            <span class="line tLine"></span>
+            <span class="line mLine"></span>
+            <span class="homebutton"><strong>Home</strong></span>
+            <span class="line bLine"></span>
+        </div>
+    </a>
+
+    <div class="main ">
+        <div class="logo text-center">
+            <img src="assets/tfylogo.png" alt="Logo">
+        </div>
+        <div class="questions">
+            <form action="prediction.html" method="GET">
+                <label required>
+                <p><span>1</span> Which difficulty are you looking for? <img src="assets/tooltip.png" alt="tooltip!" data-toggle="tooltip" data-placement="top" title="At which stage do you consider yourself as a musiscian? We aim to recommend you tablature that feels comfortable with your current skill level. "><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="radio" name="difficulty" value="novice" required> Novice
+                    <input type="radio" name="difficulty" value="intermediate"> Intermediate
+                    <input type="radio" name="difficulty" value="advanced" > Advanced
+                </p>
+            </label>
+
+
+
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>2</span>What type of tablature are you looking for? <img src="assets/tooltip.png" alt="tooltip!" data-toggle="tooltip" data-placement="top" title="The most types of tablature are either Chord or Tab variants. 
+                    Chords are more minimalistic and generally easier to learn. Tabs are harder to learn but they're generally more accurate and better overall.">
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <label  required>
+                    <input type="radio" name="type" value="Chords" required> Chords
+                    <input type="radio" name="type" value="Tab" > Tab
+                    <input type="radio" name="type" value="Guitar Pro" > Guitar Pro
+                    <input type="radio" name="type" value="Bass" > Bass
+                    <input type="radio" name="type" value="Ukelele" > Ukelele
+                    </label>
+                </p>
+
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>3</span>Please choose your preferred tuning: <img src="assets/tooltip.png" alt="tooltip!" data-toggle="tooltip" data-placement="top" title="Changing the tuning on your guitar is a big deal! A song will sound very different, so please specify what your favourite tuning is. In case you don't know what this is, please go for the standard tuning.">
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <label required>
+                    <input type="radio" name="tuning" value="standard" required> Standard
+                    <input type="radio" name="tuning" value="half step down"> Half Step Down
+                    <input type="radio" name="tuning" value="A"> A
+                    <input type="radio" name="tuning" value="C"> C
+                    <input type="radio" name="tuning" value="D"> D
+                    <input type="radio" name="tuning" value="G"> G
+                    <input type="radio" name="tuning" value="Ukalele"> Ukalele
+                </label>
+                </p>
+
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>4</span>Please choose your preferred key: <img src="assets/tooltip.png" alt="tooltip!" data-toggle="tooltip" data-placement="top"
+                        title="The key is the main note the song was written in. If you don't specifically have one in mind, just go and pick one at random!"><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <select class="custom-select mr-sm-2" id="inlineFormCustomSelect" name="key" style="width: 3%; min-width: 60px;">
+                <option value="A">A</option>
+                <option value="B">B</option>
+                <option value="C">C</option>
+                <option value="D">D</option>
+                <option value="E">E</option>
+                <option value="F">F</option>
+                <option value="G">G</option>
+            </select>
+                </p>
+
+
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>5</span>Do you prefer to use a capo? If yes, on which fret? <img src="assets/tooltip.png"
+                        alt="tooltip!" data-toggle="tooltip" data-placement="top" title="A capo is a very useful little device that enables you to play the same chord shapes to play in different keys. A capo is also used to simplify some songs that would otherwise require intermediate/advanced type of chords. You need to have a capo in order to use this function!"><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <select class="custom-select mr-sm-2" id="inlineFormCustomSelect" name="capo" style="width: 6%; min-width: 110px;" required> 
+                            <option value="no capo" >No Capo</option>
+                            <option value="capo on the first fret">1st Fret</option>
+                            <option value="capo on the second fret">2nd Fret</option>
+                            <option value="capo on the thirth fret">3th Fret</option>
+                            <option value="capo on the fourth fret">4th Fret</option>
+                            <option value="capo on the fifth fret">5th Fret</option>
+                            <option value="capo on the sixth fret">6th Fret</option>
+                            <option value="capo on the seventh fret">7th Fret</option>
+                          </select>
+                </p>
+
+            
+
+                <div class="buttons">
+                    <button type="submit" class="btn btn-primary my-1" type="submit">Submit</button>
+                    <div class="custom-control custom-checkbox my-1 small">
+                        <input type="checkbox" class="custom-control-input" id="customControlInline" required   oninvalid="this.setCustomValidity('You have to agree to our Terms and Conditions to get your recommendation!')"
+                        oninput="this.setCustomValidity('')"/>
+                        <label class="custom-control-label small" for="customControlInline" >I Agree to the Terms and Conditions</label> <img src="assets/tooltip.png"
+                        alt="tooltip!" data-toggle="tooltip" data-placement="top" title="Don't worry! We only make the prediction and that's it! Your data won't be saved or shared with anyone." style="height: 12px">
+                    </div>
+                </div>
+
+            </form>
+</div>
+        </div>
+<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+<script>$(function () {
+            $('[data-toggle="tooltip"]').tooltip();
+          })</script>
+<script src="script.js"></script>
+</body>
+
+</html>
